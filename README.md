@@ -1,1 +1,1 @@
-# certgen
+# certctl
