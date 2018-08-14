@@ -24,3 +24,12 @@ Issue a server certificate:
 certctl server --hostname <thing> --alt 192.168.1.1
 ```
 
+## Examples with OpenSSL
+
+Create CSR:
+
+```
+openssl genrsa -out domain.com.key 2048
+openssl req -new -sha256 -key domain.com.key -out domain.com.csr
+openssl req -noout -text -in domain.com.csr
+```
