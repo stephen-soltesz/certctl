@@ -9,19 +9,21 @@ Create CA:
 
 ```
 certctl ca init --name <name>
-certctl ca status
+certctl ca info
 ```
 
-Create issuer certificate for servers:
+Create intermediate issuing certificate signed by the CA:
 
 ```
-certctl issuer --server --name <thing>
+certctl intermediate init --server --name <thing>
+certctl intermediate info
 ```
 
-Issue a server certificate:
+Create server certificate signed by issuing certificate:
 
 ```
-certctl server --hostname <thing> --alt 192.168.1.1
+certctl server init --hostname <thing> --alt 192.168.1.1
+certctl server info
 ```
 
 ## Examples with OpenSSL
