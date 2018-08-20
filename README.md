@@ -8,22 +8,22 @@ If you use default output names, then subsequent commands require fewer flags.
 Create CA:
 
 ```
-certctl ca init --name <name>
-certctl ca info
+certctl create ca --name <name>
+certctl status ca
 ```
 
 Create intermediate issuing certificate signed by the CA:
 
 ```
-certctl intermediate init --server --name <thing>
-certctl intermediate info
+certctl create intermediate --server --name <thing>
+certctl status intermediate
 ```
 
 Create server certificate signed by issuing certificate:
 
 ```
-certctl server init --hostname <thing> --alt 192.168.1.1
-certctl server info
+certctl create server --hostname <thing> --alt 192.168.1.1
+certctl status server
 ```
 
 ## Examples with OpenSSL
